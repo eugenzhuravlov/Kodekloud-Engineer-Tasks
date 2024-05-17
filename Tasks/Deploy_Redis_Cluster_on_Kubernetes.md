@@ -1,5 +1,6 @@
 Redis is an open source in-memory data structure store, used as a database, cache and message broker. The Nautilus development team is planning to integrate Redis in one of their applications. So they want to setup a Redis cluster on Kubernetes. As per details mentioned below deploy a Redis cluster on Kubernetes.  
 
+
 **1.)** Create Persistent Volumes as mentioned below:  
 **a)** Create a first PersistentVolume which should be named redis-pv-01. Configure spec as accessModes which should be ReadWriteOnce, storage capacity should be 1Gi, Type should be hostPath, its hostPath should be /redis01 and directory should be already created on the worker node.  
 **b.** Create a second PersistentVolume which should be named redis-pv-02. Configure spec as accessModes which should be ReadWriteOnce, storage capacity should be 1Gi, Type should be hostPath, its hostPath should be /redis02 and directory should already be created on the worker node.  
